@@ -1,0 +1,122 @@
+/* Set a background image for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://miro.medium.com/v2/resize:fit:715/1*vw7KMhJ40NXDyTf7EriHeA.png'); /* Background image URL */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: white; /* Text color to stand out on the dark background */
+}
+
+/* Container to hold all content */
+.container {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Main heading style */
+h1 {
+    color: white;
+    font-size: 2.5rem; /* Larger heading */
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Form group to handle the upload inputs */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Gap between the image and video input sections */
+    margin-bottom: 20px;
+}
+
+/* Styling for individual upload input sections */
+.upload-group {
+    width: 48%; /* Ensure inputs take up half the width */
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+/* Label for file inputs */
+label {
+    display: block;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left; /* Align labels to the left */
+}
+
+/* File input style */
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 16px;
+}
+
+input[type="file"]:focus {
+    border-color: #5cb85c; /* Focused border color */
+}
+
+/* Styled Analyze button */
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745; /* Green color */
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Loading text style */
+#loading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Output section to display results */
+#output {
+    margin-top: 20px;
+    display: none; /* Hide initially */
+}
+
+/* Canvas (chart) style */
+canvas {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Video display style */
+video {
+    width: 100%;
+    margin-top: 20px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake human Video Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Deepfake human Video Detection</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <!-- Real Image Upload -->
+                <div class="upload-group">
+                    <label for="real-image">Upload Real Image:</label>
+                    <input type="file" id="real-image" name="real_image" accept="image/*" required>
+                </div>
+                <!-- Video Upload -->
+                <div class="upload-group">
+                    <label for="video-file">Upload Video:</label>
+                    <input type="file" id="video-file" name="video_file" accept="video/*" required>
+                </div>
+            </div>
+            <button type="submit">Analyze</button>
+        </form>
+        <div id="loading" style="display: none;">Processing... Please wait.</div>
+        <div id="output">
+            <h2>Analysis Results:</h2>
+            <canvas id="result-chart"></canvas>
+            <video id="processed-video" controls style="margin-top: 20px; width: 100%;"></video>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
