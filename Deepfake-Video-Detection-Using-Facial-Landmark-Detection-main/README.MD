@@ -35,4 +35,24 @@ A web-based interface is built using **Flask**, allowing users to upload video f
 3. The landmarks are analyzed to identify deepfake patterns  
 4. The model outputs whether the video is *Authentic* or *Fake*
 
+---
 
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/deepfake-detection.git
+cd deepfake-detection
+pip install -r requirements.txt
+python app.py
+Visit http://127.0.0.1:5000 and upload your video to test.
+
+deepfake-detection/
+├── app.py                # Flask backend
+├── templates/
+│   └── index.html        # Frontend UI
+├── static/
+│   └── style.css         # Optional: CSS styling
+├── model/                # (Optional) Trained models or configs
+├── utils.py              # Landmark extraction & logic
+├── requirements.txt
